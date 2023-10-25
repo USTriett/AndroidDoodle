@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".activities.MainActivity">
+
+    <com.example.lab1doodle.view.DrawView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/drawLayout"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:id="@+id/bottomLayout"
+        >
+        <com.example.lab1doodle.view.CustomCircle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+        <com.example.lab1doodle.view.CustomText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/CusTxt"
+            android:layout_centerVertical="true"
+            />
+        <com.example.lab1doodle.view.CustomLine
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/CusLine"
+            android:layout_centerVertical="true"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                app:itemBackground="@color/design_default_color_primary"
+                app:itemTextColor="@drawable/selected"
+                app:menu="@menu/my_navigation_items" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
